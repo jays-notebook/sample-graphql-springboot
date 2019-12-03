@@ -1,4 +1,4 @@
-package com.yourbookmark.api.handler;
+package com.yourbookmark.api.exception;
 
 import graphql.GraphQLError;
 import graphql.GraphqlErrorBuilder;

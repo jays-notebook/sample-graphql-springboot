@@ -1,4 +1,4 @@
-package com.yourbookmark.api.handler;
+package com.yourbookmark.api.exception;
 
 import graphql.ErrorClassification;
 
@@ -8,5 +8,6 @@ public enum CustomErrorType implements ErrorClassification {
     DataFetchingException,
     OperationNotSupported,
     ExecutionAborted,
+    BadRequest,
     MethodNotAllowed
 }
