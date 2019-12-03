@@ -13,7 +13,7 @@ import graphql.schema.idl.SchemaGenerator;
 import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -21,16 +21,16 @@ import java.net.URL;
 
 import static graphql.GraphQL.newGraphQL;
 
-@Service
-public class BookMarkServiceImpl implements BookMarkService {
+@Component
+public class BookMarkProvider {
 
     private final UserDataFetchers userDataFetchers;
     private final BookMarkDataFetchers bookMarkDataFetchers;
 
     private GraphQL graphQL;
 
-    public BookMarkServiceImpl(UserDataFetchers userDataFetchers,
-                               BookMarkDataFetchers bookMarkDataFetchers) {
+    public BookMarkProvider(UserDataFetchers userDataFetchers,
+                            BookMarkDataFetchers bookMarkDataFetchers) {
         this.userDataFetchers = userDataFetchers;
         this.bookMarkDataFetchers = bookMarkDataFetchers;
     }
