@@ -2,7 +2,7 @@ package com.yourbookmark.api.service;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
-import com.yourbookmark.api.handler.GlobalDataFetcherHandler;
+import com.yourbookmark.api.exception.GlobalDataFetcherHandler;
 import com.yourbookmark.api.service.datafetcher.BookMarkDataFetchers;
 import com.yourbookmark.api.service.datafetcher.UserDataFetchers;
 import graphql.GraphQL;

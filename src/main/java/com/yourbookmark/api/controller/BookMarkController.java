@@ -1,6 +1,6 @@
 package com.yourbookmark.api.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.Map;
 
 @RestController
@@ -23,19 +22,15 @@ public class BookMarkController {
     }
 
     @PostMapping
-    public ExecutionResult graphQLResult(@RequestBody String query) throws IOException {
+    public ExecutionResult graphQLResult(@RequestBody String query) {
 
         String finalQuery = query;
         if (query.contains(PREFIX_QUERY)) {
-            Map jsonMap = this.jsonToMap(finalQuery);
-            query = (String) jsonMap.get("query");
+            Map<String, String> jsonMap = new Gson().fromJson(query, Map.class);
+            query = jsonMap.get("query");
         }
 
         return graphQL.execute(query);
     }
 
-    private Map jsonToMap(String json) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(json, Map.class);
-    }
 }
