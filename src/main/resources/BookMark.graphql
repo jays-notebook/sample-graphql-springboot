@@ -1,0 +1,35 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    addUser(name: String!): User!
+}
+
+type Query {
+    users: [User]
+    user(id: ID): User
+    userbyname(name: String): User
+    bookmarks: [BookMark]
+    bookmark(id: ID): BookMark
+}
+
+type BookMark {
+    bookmarkId: Int
+    title: String
+    url: String
+    users: [User]
+    category: String
+    hashTags: [HashTag]
+}
+
+type HashTag {
+    hashTagId: Int
+    hashTagName: String
+}
+
+type User {
+    userId: Int
+    name: String
+}

@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yourbookmark'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spring
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.9.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.1.9.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.9.RELEASE'
+
+    // google core library
+    implementation 'com.google.guava:guava:26.0-jre'
+
+    // graphql
+    implementation 'com.graphql-java:graphql-java:13.0'
+    implementation 'com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0'
+
+    // hsqlDB
+    runtimeOnly group: 'org.hsqldb', name: 'hsqldb', version: '2.5.0'
+
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.9.RELEASE'
+
+    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.2'
+}
+
+test {
+    useJUnitPlatform()
+}

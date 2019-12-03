@@ -1,0 +1,27 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# Package Files
+*.jar
+
+# Tools and OS
+.idea
+*.iml
+.DS_Store
+.classpath
+.project
+.settings
+bin
+
+# Gradle
+out/
+.gradle
+/build/
+!gradle/wrapper/*.jar
+*.bat
+
+# graphql
+.graphqlconfig
