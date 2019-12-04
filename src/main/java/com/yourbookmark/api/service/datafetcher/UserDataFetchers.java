@@ -36,7 +36,10 @@ public class UserDataFetchers {
 
     public DataFetcher<User> addUser() {
         return environment -> {
-            User user = new User(environment.getArgument("name"));
+            String name = environment.getArgument("name");
+            Integer age = environment.getArgument("age");
+
+            User user = new User(name, age);
             return userRepository.save(user);
         };
     }

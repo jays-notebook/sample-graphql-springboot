@@ -31,7 +31,7 @@ public class YourBookMarkApiApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
         String sampleUrl = "http://testdomain.com";
-        User user = new User("Jay");
+        User user = new User("Jay", 100);
 
         BookMark bookMark1 = new BookMark("test #1 BookMark!!", sampleUrl, BookMarkCategory.BOOK, user);
         BookMark bookMark2 = new BookMark("test #2 BookMark!!", sampleUrl, BookMarkCategory.DEVELOP, user);

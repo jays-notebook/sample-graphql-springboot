@@ -25,6 +25,8 @@ public class User {
 
     private String name;
 
+    private Integer age;
+
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "user_bookmark",
                joinColumns = @JoinColumn(name = "user_id"),
@@ -34,8 +36,9 @@ public class User {
     public User() {
     }
 
-    public User(String name) {
+    public User(String name, Integer age) {
         this.name = name;
+        this.age = age;
     }
 
     public Long getUserId() {
@@ -52,6 +55,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public Set<BookMark> getBookMarks() {

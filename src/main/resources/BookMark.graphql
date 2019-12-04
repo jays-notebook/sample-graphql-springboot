@@ -4,7 +4,7 @@ schema {
 }
 
 type Mutation {
-    addUser(name: String!): User!
+    addUser(name: String!, age: Int): User!
 }
 
 type Query {
@@ -32,4 +32,5 @@ type HashTag {
 type User {
     userId: Int
     name: String
+    age: Int
 }
