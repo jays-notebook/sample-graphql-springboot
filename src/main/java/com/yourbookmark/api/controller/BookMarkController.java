@@ -24,7 +24,6 @@ public class BookMarkController {
     @PostMapping
     public ExecutionResult graphQLResult(@RequestBody String query) {
 
-        String finalQuery = query;
         if (query.contains(PREFIX_QUERY)) {
             Map<String, String> jsonMap = new Gson().fromJson(query, Map.class);
             query = jsonMap.get("query");
