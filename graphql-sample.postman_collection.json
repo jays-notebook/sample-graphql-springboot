@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "4c823aeb-075a-41ff-bf5a-a35e78b7c77e",
+		"name": "graphql-sample",
+		"description": "https://github.com/Jae-Young-Kim/sample-graphql-springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Mutation] add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    addUser(\n        name: \"Jay101\"\n        age: 1000\n    ) {\n        name\n        age\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Query] users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    users {\n        userId\n        name\n        age\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Query] user(id)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    user(id: 1) {\n        userId\n        name\n        age\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Query] userbyname(name)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    userbyname(name: \"Jay\") {\n        userId\n        name\n        age\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Query] bookmarks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    bookmarks {\n        bookmarkId\n        title\n        url\n        users {\n            userId\n            name\n        }\n        category\n        hashTags {\n            hashTagName\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Query] bookmark(id)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    bookmark(id: 1) {\n        bookmarkId\n        title\n        url\n        users {\n            name\n            age\n        }\n        category\n        hashTags {\n            hashTagId\n            hashTagName\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookMark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookMark"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
