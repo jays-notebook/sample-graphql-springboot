@@ -8,7 +8,7 @@
 > Graph QL(이하 gql)은 Structed Query Language(이하 sql)와 마찬가지로 쿼리 언어입니다. (중략) gql은 웹 클라이언트가 데이터를 서버로 부터 효율적으로 가져오는 것이 목적입니다
 
 > REST API는 URL, METHOD등을 조합하기 때문에 다양한 Endpoint가 존재 합니다. 반면, gql은 단 하나의 Endpoint가 존재 합니다. 또한, gql API에서는 불러오는 데이터의 종류를 쿼리 조합을 통해서 결정 합니다.  
-
+<br/>
 ![REST vs GraphQL](https://miro.medium.com/max/800/1*qpyJSVVPkd5c6ItMmivnYg.png)*An artists’ interpretation of fetching resources with multiple REST roundtrips vs. one GraphQL request([source](https://blog.apollographql.com/graphql-vs-rest-5d425123e34b))*]
 
 ## About this Project
