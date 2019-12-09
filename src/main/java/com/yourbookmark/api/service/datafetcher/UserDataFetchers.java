@@ -3,7 +3,6 @@ package com.yourbookmark.api.service.datafetcher;
 import com.yourbookmark.api.entity.User;
 import com.yourbookmark.api.repository.UserRepository;
 import graphql.schema.DataFetcher;
-import graphql.schema.DataFetchingEnvironment;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
