@@ -26,7 +26,7 @@ class ManyToManyTest {
         BookMark bookMark2 = new BookMark("test #2 BookMark!!", testUrl, BookMarkCategory.DEVELOP);
         BookMark bookMark3 = new BookMark("test #3 BookMark!!", testUrl, BookMarkCategory.ECONOMY);
 
-        User user = new User("JY");
+        User user = new User("JY", 1000);
 
         bookMark1.addUser(user);
         bookMark2.addUser(user);
